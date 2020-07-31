@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMovie - генерация аниме по вашему предпочтению</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- <link rel="icon" href="./obrazky" type="image/png" /> -->
+</head>
+<body class="site">
+    <header class="header">
+        <a class="logo" href="#" onclick="location.reload();" >
+            <img class="img_header" src="./ImagesForWeb/icon_photo-resizer.ru.png" alt="logo GAMovie">
+        </a>
+        <div class="textHeader" style="padding-left:-150px;"><strong>GAMovie</strong></div>
+        <div class="nav-menu">
+            <div class="header_item" style="padding-top: -5px;"><a href="./ganime.html">Home</a></div>
+            <div class="header_item"><a  href="#Contact">Contact</a></div>
+            <div class="header_item"><a href="https://yummyanime.club/top">Top 100 anime</a></div>
+            <div class="header_item" style="padding-top:10px; border-bottom: 2px solid red;"><a  href="#">Help</a></div>
+        </div>
+        <button id="startGenerate" type="button" class="myButton" >Generate anime for you</button>
+    </header>
+    <main class="site-content">
+        <ul class="submenu-top" id="panel">
+            <li class="submenu-items">
+                <figure class="content-image">
+                    <img id="imgContent0" src='#' alt=" " style="width: 100%; height: 400px;">
+                    <figcaption id="textContent" class="figcaption-items">???</figcaption>
+                </figure>
+            </li>
+            <li class="submenu-items">
+                <figure class="content-image">
+                    <img id="imgContent1" src="" alt=" " style="width: 100%; height: 400px;"> 
+                    <figcaption id="textContent1" class="figcaption-items">???</figcaption>
+                </figure>
+            </li>
+            <li class="submenu-items">
+                <figure class="content-image">
+                    <img id="imgContent2" src="" alt=" " style="width: 100%; height: 400px;">
+                    <figcaption  id="textContent2" class="figcaption-items">???</figcaption>
+                </figure>
+            </li>
+            <li class="submenu-items">
+                <figure class="content-image">
+                    <img id="imgContent3" src="" alt=" " style="width: 100%; height: 400px;">
+                    <figcaption id="textContent3" class="figcaption-items">???</figcaption>
+                </figure>
+            </li>
+        </ul>
+</main>
+<script src="test.js">
+</script>
+<script>
+    document.getElementById("startGenerate").addEventListener("click",discover);
+    document.getElementById("startGenerate").addEventListener("click",showPanel);
+</script>
+
+    <footer>
+        <div class="contactContainer">
+        <p id="Contact">For donate contact: <a style="color:blue; font-size: 19px;" href="mailto:mistercheldon@gmail.com">Send Mail</a></p>
+        <p>Copyright: Pavel Ekishev</p>
+        <p>Create:<time datetime="2020-04-17">28 апреля 2020 года</time></p>
+        </div>
+    </footer>
+    
+</body>
+
+
+</html>
