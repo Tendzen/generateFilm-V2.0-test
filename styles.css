@@ -10,13 +10,6 @@ body {
 html,body{
     height: 100%;
 }
-.header {
-    background: radial-gradient(circle, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 100%);
-    z-index: 2;
-    padding: 0px 5px 10px 0px;
-    justify-content: space-between;     
-    min-height: 250px;     
-    }
 
 .logo {
     background-repeat: no-repeat;
@@ -97,10 +90,7 @@ footer{
     min-height: 100vh; 
     flex-direction: column;
       }
-.site-content{
-    flex:1;
-    margin:5px;
-}
+
 p{
     color:black;
     font-size: 15px;

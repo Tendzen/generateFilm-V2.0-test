@@ -4,12 +4,36 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAMovie - генерация аниме по вашему предпочтению</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- <link rel="icon" href="./obrazky" type="image/png" /> -->
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- <link rel="icon" href="./obrazky" type="image/png"/> -->
 </head>
-<body class="site">
-    <header class="header">
-        <a class="logo" href="#" onclick="location.reload();" >
+<body>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+    
+
+        <!-- <a class="navbar-brand" href="#" onclick="location.reload();">
             <img class="img_header" src="./ImagesForWeb/icon_photo-resizer.ru.png" alt="logo GAMovie">
         </a>
         <div class="textHeader" style="padding-left:-150px;"><strong>GAMovie</strong></div>
@@ -19,9 +43,9 @@
             <div class="header_item"><a href="https://yummyanime.club/top">Top 100 anime</a></div>
             <div class="header_item" style="padding-top:10px; border-bottom: 2px solid red;"><a  href="#">Help</a></div>
         </div>
-        <button id="startGenerate" type="button" class="myButton" >Generate anime for you</button>
-    </header>
-    <main class="site-content">
+        <button id="startGenerate" type="button" class="myButton" >Generate anime for you</button> -->
+
+    <main class="container">
         <ul class="submenu-top" id="panel">
             <li class="submenu-items">
                 <figure class="content-image">

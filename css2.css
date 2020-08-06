@@ -1,0 +1,54 @@
+body, html{
+    height: 100%;
+    margin:0;
+    
+}
+body{
+    padding-bottom: 50rem;
+    display: block;
+}
+
+body{
+    background: url('./svgImages/SVG/bg.svg') no-repeat;
+    background-size: cover;
+    height: 15rem;
+    max-width: 100%;
+}
+.nav-item{
+    font-size: 2em;
+    font-family: 'Amatic SC';
+    
+}
+.navbar-brand{
+    font-size: 5em;
+    padding-left: 2.5em;
+    padding-top: 0.5em;
+    font-family: 'Amatic SC';
+    
+}
+#logo{
+    position: absolute;
+    width: 15rem;
+    max-width: 100%;
+    top:2rem;
+    left:-1.5rem;
+}
+
+.animate__flash{
+    animation-duration: 6s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
+.container{
+    width: 100%;
+
+}
