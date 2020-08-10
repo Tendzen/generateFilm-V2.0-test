@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Gamovie</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css2.css"/>
+  <link rel="stylesheet" href="./css2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 </head>
-<body class='container-fluid bg-dark'>
-    <nav class="navbar navbar-expand-lg navbar-secondary pb-5">
+
+<body class='bg-dark'>
+    <header class='header height-main' id='imgContainer'>
+      <nav class="navbar navbar-expand-lg navbar-secondary">
         <a class="navbar-brand text-light animated flash infinite" href="#">
           <img src="./svgImages/SVG/Vrstva 1.svg" id="logo">
           <span class='animate__flash'>Gamovie</span>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,7 +34,8 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -47,11 +51,76 @@
           </ul>
         </div>
       </nav>
-      <section class='container'>
-      <footer class="footer">
-        <div class='container text-info'>
-          <p>Copyright: Pavel Ekishev</p>
+    </header>
+  <main role='main' class='container'>
+          <div class='container text-center col'>
+            <button type="button" class="btn btn-light" id="startGenerate">Generate Anime For You</button>
+          </div>
+      <div id="carouselAnime" class="carousel vert slide carouse-fade" data-ride="carousel"  data-interval="2000">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselAnime" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselAnime" data-slide-to="1"></li>
+          <li data-target="#carouselAnime" data-slide-to="2"></li>
+          <li data-target="#carouselAnime" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent0'>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent1'>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent2'>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href='#'>
+            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent3'>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </a>
+          </div>
         </div>
-      </footer>
-    </section>
+        <a class="carousel-control-prev" href="#carouselAnime" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselAnime" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  </main>
+  <footer class="page-footer text-center py-3 fixed-bottom bg-dark">
+    <div class='container text '>
+      <span>© 2020 Copyright: Pavel Ekishev</span>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="test.js"></script>
+  <script>
+    $('#startGenerate').on('click', function (e) {
+      discover();
+      showPanel();
+      $('#element').toast('show');
+    })
+  </script>
 </body>
+
+</html>
