@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css2.css" />
+  <link rel="stylesheet" href="css2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
@@ -14,12 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
-<body class='bg-dark'>
-    <header class='header height-main' id='imgContainer'>
-      <nav class="navbar navbar-expand-lg navbar-secondary">
-        <a class="navbar-brand text-light animated flash infinite" href="#">
+<body id='body'>
+    <header class='header height-main active' id='imgContainer'>
+      <nav class="navbar navbar-expand-xl navbar-secondary">
+        <a class="navbar-brand text-light animated flash infinite" href="" onclick="location.reload()">
           <img src="./svgImages/SVG/Vrstva 1.svg" id="logo">
-          <span class='animate__flash'>Gamovie</span>
+          <span class='animate__flash' id='siteName'>Gamovie</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,11 +27,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
+            <li class='nav-item' id='switchContainer'>
+              <label id="switch" class="switch">
+                <input type="checkbox" id="slider">
+                <span class="slider round"></span>
+            </label>
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="" onclick="location.reload()">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="https://github.com/Tendzen">Git</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -39,10 +45,10 @@
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="mailto:mistercheldon@gmail.com">Mail</a>
+                <a class="dropdown-item" href="https://www.linkedin.com/in/pavel-ekishev-4640281b2/">LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">top 100 anime</a>
               </div>
             </li>
             <li class="nav-item">
@@ -51,36 +57,46 @@
           </ul>
         </div>
       </nav>
+      <div  class='container-lg'id='circleConteiner'>
+        <div id='circle'></div>
+    </div>
+      <div class='container-md-6 text-center' id='buttonContainer'>
+        <button type="button" class="btn btn-light text-center" id="startGenerate">Generate Anime For You</button>
+      </div>
     </header>
-  <main role='main' class='container'>
-          <div class='container text-center col'>
-            <button type="button" class="btn btn-light" id="startGenerate">Generate Anime For You</button>
-          </div>
-      <div id="carouselAnime" class="carousel vert slide carouse-fade" data-ride="carousel"  data-interval="2000">
+  <main role='main' class='container-fluid'>
+    <div class='container-md-7' id='animeListContainer'>
+      <div id="carouselAnime" class="container-md-7 carousel vert slide carouse-fade" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselAnime" data-slide-to="0" class="active"></li>
           <li data-target="#carouselAnime" data-slide-to="1"></li>
           <li data-target="#carouselAnime" data-slide-to="2"></li>
           <li data-target="#carouselAnime" data-slide-to="3"></li>
         </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
+        <div class="carousel-inner" id ='carousel'>
+          <div class="carousel-item active" id='item1'>
+            <a href='#sectionText'>
             <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent0'>
             <div class="carousel-caption d-none d-md-block">
             </div>
+          </a>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" id='item2'>
+            <a href='#sectionText'>
             <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent1'>
             <div class="carousel-caption d-none d-md-block">
             </div>
+          </a>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" id='item3'>
+            <a href='#sectionText'>
             <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent2'>
             <div class="carousel-caption d-none d-md-block">
             </div>
+          </a>
           </div>
-          <div class="carousel-item">
-            <a href='#'>
+          <div class="carousel-item" id='item4'>
+            <a href='#sectionText'>
             <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent3'>
             <div class="carousel-caption d-none d-md-block">
             </div>
@@ -97,8 +113,15 @@
         </a>
       </div>
     </div>
-  </div>
   </main>
+  <div class="container-fluid text-center col-xl" id="sectionText">
+    <div class='container xl-4 text-center' id='textContainer'>
+      <h1 id='titleContainer1' class="text-center">
+      </h1>
+      <h1 id='descriptionContent1' class="text-center highlight">
+      </h1>
+    </div>
+    </div>
   <footer class="page-footer text-center py-3 fixed-bottom bg-dark">
     <div class='container text '>
       <span>© 2020 Copyright: Pavel Ekishev</span>
@@ -113,14 +136,15 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
     integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
     crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="test.js"></script>
   <script>
     $('#startGenerate').on('click', function (e) {
       discover();
       showPanel();
-      $('#element').toast('show');
-    })
-  </script>
+    });
+    document.getElementById('carousel').addEventListener('click',rotateSvg);
+    </script>
 </body>
 
 </html>

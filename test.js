@@ -1,68 +1,56 @@
 "use strict";
-
-
-
-function discover() {
+function discover(data) {
     getData()
         .then(data => {
             console.log('outer', data);
             let animes = pickFourRandomAnimeFromArray(data);
-            console.log(animes);
-            let arrayUrlAnime = animes.map(function(element)
-                {       
-                return element.picUrl;})
-            for(let i=0;i<arrayUrlAnime.length;i++){                
+            let arrayUrlAnime = animes.map(function(element){       
+                return element.picUrl;
+            })
+            for(let i=0;i<arrayUrlAnime.length;i++){ 
+                console.log(arrayUrlAnime);               
                 let imgSrc = document.getElementById("imgContent"+i);    
                 imgSrc.src = arrayUrlAnime[i];
-                    }
+            }
             let arrayTitle = animes.map(function(element){
                 return element.title;
-                    })
+            })
             let arrayYears = animes.map(function(element){
                 return element.year;
-                    })
+            })
             let arrayStudio = animes.map(function(element){
                 return element.studio;
-                    })
-                    let space = " <br> ";
-                    let i = 0;
-                    
-                    let elementById = document.getElementById("textContent");
-                    let textTitles = elementById.innerHTML = "";
-                    elementById.innerHTML += arrayTitle[i];
-                    elementById.innerHTML += space;
-                    elementById.innerHTML += arrayYears[i];
-                    elementById.innerHTML += space;
-                    elementById.innerHTML += arrayStudio[i];
-                    
-                    let elementById1 = document.getElementById("textContent1");
-                    textTitles = elementById1.innerHTML = "";
-                    elementById1.innerHTML += arrayTitle[i + 1];
-                    elementById1.innerHTML += space;
-                    elementById1.innerHTML += arrayYears[i + 1];
-                    elementById1.innerHTML += space;
-                    elementById1.innerHTML += arrayStudio[i + 1];
-                    
-                    let elementById2 = document.getElementById("textContent2");
-                    textTitles = elementById2.innerHTML = "";
-                    elementById2.innerHTML += arrayTitle[i + 2];
-                    elementById2.innerHTML += space;
-                    elementById2.innerHTML += arrayYears[i + 2];
-                    elementById2.innerHTML += space;
-                    elementById2.innerHTML += arrayStudio[i + 2];
-                    
-                    let elementById3 = document.getElementById("textContent3");
-                    textTitles = elementById3.innerHTML = "";
-                    elementById3.innerHTML += arrayTitle[i + 3];
-                    elementById3.innerHTML += space;
-                    elementById3.innerHTML += arrayYears[i + 3];
-                    elementById3.innerHTML += space;
-                    elementById3.innerHTML += arrayStudio[i + 3];               
-        }) 
-        .catch(rej => {
-            console.log(rej)
+            })
+            let space = " <br> ";
+            let i = 0;
+
+            function addDescription(item,title,year,studio){
+                document.getElementById(item).addEventListener('click',function(){          
+                    let tittleId = document.getElementById('titleContainer1');
+                    let descriptionId =  document.getElementById('descriptionContent1');
+                    tittleId.innerHTML = "";
+                    descriptionId.innerHTML = "";
+                    setTimeout(function(){
+                        tittleId.innerHTML = "";
+                        descriptionId.innerHTML = "";
+                        tittleId.innerHTML += title;
+                        descriptionId.innerHTML += year;
+                        descriptionId.innerHTML += space;
+                        descriptionId.innerHTML += studio;
+                    },4500);
+                });
+            }
+            addDescription('item1',arrayTitle[i],arrayYears[i],arrayStudio[i]);
+            addDescription('item2',arrayTitle[i+1],arrayYears[i+1],arrayStudio[i+1]);
+            addDescription('item3',arrayTitle[i+2],arrayYears[i+2],arrayStudio[i+2]);
+            addDescription('item4',arrayTitle[i+3],arrayYears[i+3],arrayStudio[i+3]);
+        })
+        
+        .catch(err => {
+            console.log(err)
         })
 };
+
 
 const myParams = {
     method: 'GET',
@@ -74,8 +62,8 @@ const myParams = {
 };
 
 async function getData() {
-    let data = [];
     try {
+        let data = [];
         let newRequest = new Request("./baza.json", myParams);
         let response = await fetch(newRequest);
         data = await response.json();
@@ -105,5 +93,52 @@ function pickFourRandomAnimeFromArray(data) {
 };
 
 function showPanel(){
-    document.getElementById("panel").style.display ="flex";
+    document.getElementById("carouselAnime").style.display ="block";
 }
+
+const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        document.getElementById('body').classList.add('bg-dark');
+        document.getElementById('siteName').style.color = 'white';
+        document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgba(0,0,0,0.66)';
+    }
+    else if(currentTheme === 'light'){
+        toggleSwitch.checked = false;
+        document.getElementById('body').classList.remove('bg-dark');
+        document.getElementById('siteName').style.color = 'black';
+        document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgb(245, 243, 243)';
+    }
+}
+function switchTheme(e){
+    console.log(localStorage.getItem('theme'));
+
+    if (e.target.checked) {
+        document.getElementById('body').classList.add('bg-dark');
+        document.getElementById('siteName').style.color = 'white';
+        document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgba(0,0,0,0.66)';
+        localStorage.setItem('theme', 'dark');
+    }
+    else {        
+        document.getElementById('body').classList.remove('bg-dark');
+        document.getElementById('siteName').style.color = 'black';
+        document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgb(245, 243, 243)';
+        localStorage.setItem('theme', 'light');
+    }    
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+let currentDeg = 720;
+function rotateSvg(){
+    let sectionText = document.getElementById('sectionText');
+    sectionText.style.transform = 'rotate('+currentDeg+'deg)';
+    currentDeg+=720;
+    if(currentDeg>20000){
+        currentDeg=720;
+    }
+    return;
+ }

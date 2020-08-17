@@ -1,54 +1,314 @@
+
+
 body, html{
     height: 100%;
     margin:0;
-    
+}
+html {
+    height: 90vh;
+    scroll-behavior: smooth;
 }
 body{
-    padding-bottom: 50rem;
+    width: 100%;
+    background: url('./svgImages/SVG/bg.svg') no-repeat;
+    background-size: cover;
+    
+    
+}
+main{
+    height: 20%;
+}
+header{
+    
+    width: 100%;
+    height: 70vh;
+}
+#textContainer{
+    position: relative;
+    top:5%;
+    z-index: -4;
+    max-width: 100%;
+    max-height: 100%;
+    width: 80vw;
+    height: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+#titleContainer1{
+    color: black;
+    font-size: 9vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    min-width:10vw;
+    min-height: 10vw;
+    max-width: 70%;
+    max-height: 70%;
+    position: relative;
+    font-family: 'Amatic SC';
+    text-align: center;
+    opacity: 1;
+         
+}
+#descriptionContent1{
+    opacity: 1;
+    right: 0;
+    font-size: 7vw;
+    left: 0;
+    position: relative;
+    color:rgba(255, 0, 0, 0.836);
+    margin: auto;
+    display: flex;
+    min-width:10vw;
+    min-height: 10vw;
+    max-width: 70%;
+    max-height: 70%;
+    text-align: center;
+}
+
+
+#sectionText{
+    background: url('./svgImages/SVG/left.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+    width: 80%;
+    height: 75%;
+    right: 0;
+    left:0;
+    margin: auto;
+    -moz-transition: transform 3s; 
+    -webkit-transition: transform 3s;  
+    -ms-transition: transform 3s;  
+    -o-transition: transform 3s;  
+    transition: transform 3s; 
+    transition-delay: 1s;
+
+}
+
+#switchContainer{
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 8rem;
+    min-height: 8rem;
+    z-index: 1;
+    opacity: 1;
+    padding-top: 2rem ;
+    right: 24%;
+    
+    
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333;
+    transition: 0.4s;
+  }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  input:checked + .slider:before {
+    transform: translateX(24px);
+    background: #333333;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  #circle{
+      position: relative;
+      z-index: -1020;
+      background:rgb(1, 39, 165);
+      rotate: 180deg;
+      border-radius: 35%;
+      width: 7.5vw;
+      max-width: 100%;
+      height: 15rem;
+      opacity: 0.3;
+  }
+  #circleConteiner{
+      position: absolute;
+      top: -5%;
+      right:0;
+      left:64.5%;
+      margin: auto;
+  }
+
+  #siteName{
+      color:rgb(10, 10, 10);
+      position: relative;
+      right:2rem;
+  }
+
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
+#panel{
+    display:none;
+}
+.fixed-bottom{
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
 body{
-    background: url('./svgImages/SVG/bg.svg') no-repeat;
-    background-size: cover;
-    height: 15rem;
+    height: 120vw;
     max-width: 100%;
 }
 .nav-item{
-    font-size: 2em;
+    font-size: 2.5vw;
     font-family: 'Amatic SC';
+    padding-top: 1rem;
     
 }
-.navbar-brand{
-    font-size: 5em;
-    padding-left: 2.5em;
-    padding-top: 0.5em;
+#startGenerate{
+    
     font-family: 'Amatic SC';
+    font-size: 5.5vw;
+    position: relative;
+    max-width: 100%;
+    min-height: 8rem;
+    
+}
+#buttonContainer{
+    min-width: 10vw;
+    width:50vw;
+    height: 15vw;
+    top:60%;
+    max-width: 100%;
+    position: absolute;
+    bottom:25rem;
+}
+
+.navbar-brand{
+    position: absolute;
+    font-size: 6em;
+    top:2rem;
+    font-family: 'Amatic SC';
+    left:-2rem;
     
 }
 #logo{
-    position: absolute;
-    width: 15rem;
+    position: relative;
+    min-width: 2rem;
+    width: 16rem;
     max-width: 100%;
-    top:2rem;
-    left:-1.5rem;
+    bottom:.5rem;
 }
 
 .animate__flash{
     animation-duration: 6s;
     animation-delay: 3s;
     animation-iteration-count: infinite;
+    font-size: 7.5vw;
+    
+}
 
-}
-.footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-color: #f5f5f5;
-}
 .container{
     width: 100%;
+    text-align: center;
+}
+@media only screen and (max-width: 1200px){
+    #buttonContainer{
+        bottom:20rem;
+
+    }
+    #circle{
+        display:none;
+
+    }
+    .animate__flash{
+        font-size: 10vw;
+    }
 
 }
+@media only screen and (min-width:1650px){
+    #switchContainer{
+        padding-top: 2.7rem;
+        right: 25.5%;
+
+
+    }
+}
+
+#carouselAnime{
+    position: relative;
+    display: none;
+    max-width: 100%;
+    width: 27vw;
+    min-width: 10rem;
+}
+#animeListContainer{
+    position: absolute;
+    max-width: 100%;
+    width: 27vw;
+    min-width: 10rem;
+    right: 0;
+    left: 29rem;
+    top:8rem;
+    margin:auto;
+
+}
+p{
+    font-size: 5rem;
+    font-family: 'Shadows Into Light', cursive;
+    position: relative;
+    
+}
+h1{
+    font-size: 5.4rem;
+    left:-3.5rem;
+    position: relative;
+    font-family: 'Shadows Into Light', cursive;
+    
+    
+}
+    
+
