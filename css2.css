@@ -8,10 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    
     height: 120vw;
     max-width: 100%; 
-    
+}
+a{
+    scroll-behavior: smooth;
 }
 
 header{
