@@ -13,120 +13,124 @@
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 </head>
-
 <body id='body'>
-    <header class='header height-main active' id='imgContainer'>
-      <nav class="navbar navbar-expand-xl navbar-secondary">
-        <a class="navbar-brand text-light animated flash infinite" href="" onclick="location.reload()">
-          <img src="./svgImages/SVG/Vrstva 1.svg" id="logo">
-          <span class='animate__flash' id='siteName'>Gamovie</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class='nav-item' id='switchContainer'>
-              <label id="switch" class="switch">
-                <input type="checkbox" id="slider">
-                <span class="slider round"></span>
-            </label>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="" onclick="location.reload()">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/Tendzen">Git</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="mailto:mistercheldon@gmail.com">Mail</a>
-                <a class="dropdown-item" href="https://www.linkedin.com/in/pavel-ekishev-4640281b2/">LinkedIn</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">top 100 anime</a>
+  <header class='height-main active' id='imgContainer'>
+    <nav class="navbar navbar-expand-xl navbar-secondary">
+      <a class="navbar-brand text-dark" href="" onclick="location.reload()" id='brandContainer'>
+        <img src="./svgImages/SVG/Vrstva 1.svg" width="250" height="200" alt="" id='logo'>
+        <span  class='animate__flash' id='brandName'>Gamovie</span>
+      </a>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <div id='circle'></div>
+          <li class='nav-item' id='switchContainer'>
+            <label id="switch" class="switch">
+              <input type="checkbox" id="slider">
+              <span class="slider round"></span>
+          </label>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="" onclick="location.reload()">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Tendzen">Git</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="mailto:mistercheldon@gmail.com">Mail</a>
+              <a class="dropdown-item" href="https://www.linkedin.com/in/pavel-ekishev-4640281b2/">LinkedIn</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">top 100 anime</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class='container'>
+      <div class='row' id='space'>
+        <div class='col w-100'>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class='row align-items-center' id='rowContainer'>
+          <div class='col-xl-3' id='firstCol'>
+              <button type="button" class="btn btn-light text-center" id="startGenerate">Generate Anime For You</button>
+            </div>  
+            <div class="w-100 d-block d-sm-none"></div>
+          <div class='col-xl-5 ml-auto' id='secondCol'>
+            <div id="carouselAnime" class="carousel vert slide carouse-fade text-center" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselAnime" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselAnime" data-slide-to="1"></li>
+                <li data-target="#carouselAnime" data-slide-to="2"></li>
+                <li data-target="#carouselAnime" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner" id ='carousel'>
+                <div class="carousel-item active" id='item1'>
+                  <a href='#sectionText'>
+                  <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent0'>
+                  <div class="carousel-caption d-none d-md-block"></div>
+                </a>
+                </div>
+                  <div class="carousel-item" id='item2'>
+                    <a href='#sectionText'>
+                    <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent1'>
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </a>
+                  </div>
+                  <div class="carousel-item" id='item3'>
+                    <a href='#sectionText'>
+                    <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent2'>
+                    <div class="carousel-caption d-none d-md-block"></div>
+                    </a>
+                  </div>
+                  <div class="carousel-item" id='item4'>
+                    <a href='#sectionText'>
+                    <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent3'>
+                    <div class="carousel-caption d-none d-md-block"></div>
+                    </a>
+                  </div>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div  class='container-lg'id='circleConteiner'>
-        <div id='circle'></div>
-    </div>
-      <div class='container-md-6 text-center' id='buttonContainer'>
-        <button type="button" class="btn btn-light text-center" id="startGenerate">Generate Anime For You</button>
-      </div>
-    </header>
-  <main role='main' class='container-fluid'>
-    <div class='container-md-7' id='animeListContainer'>
-      <div id="carouselAnime" class="container-md-7 carousel vert slide carouse-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselAnime" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselAnime" data-slide-to="1"></li>
-          <li data-target="#carouselAnime" data-slide-to="2"></li>
-          <li data-target="#carouselAnime" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner" id ='carousel'>
-          <div class="carousel-item active" id='item1'>
-            <a href='#sectionText'>
-            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent0'>
-            <div class="carousel-caption d-none d-md-block">
+              <a class="carousel-control-prev" href="#carouselAnime" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+              <a class="carousel-control-next" href="#carouselAnime" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
             </div>
-          </a>
           </div>
-          <div class="carousel-item" id='item2'>
-            <a href='#sectionText'>
-            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent1'>
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </a>
-          </div>
-          <div class="carousel-item" id='item3'>
-            <a href='#sectionText'>
-            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent2'>
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </a>
-          </div>
-          <div class="carousel-item" id='item4'>
-            <a href='#sectionText'>
-            <img src="" class="d-block w-100 img-fluid" alt="..." id='imgContent3'>
-            <div class="carousel-caption d-none d-md-block">
-            </div>
-          </a>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselAnime" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselAnime" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
-        </a>
       </div>
     </div>
-  </main>
-  <div class="container-fluid text-center col-xl" id="sectionText">
-    <div class='container xl-4 text-center' id='textContainer'>
-      <h1 id='titleContainer1' class="text-center">
-      </h1>
-      <h1 id='descriptionContent1' class="text-center highlight">
-      </h1>
-    </div>
-    </div>
-  <footer class="page-footer text-center py-3 fixed-bottom bg-dark">
-    <div class='container text '>
-      <span>© 2020 Copyright: Pavel Ekishev</span>
-    </div>
-  </footer>
+</header>
+<main role='main'>
+</main>
+<div class="container-fluid text-center col-xl" id="sectionText">
+  <div class='container xl-4 text-center' id='textContainer'>
+    <h1 id='titleContainer1' class="text-center">
+    </h1>
+    <h1 id='descriptionContent1' class="text-center highlight">
+    </h1>
+  </div>
+  </div>
+<footer class="page-footer text-center py-3 fixed-bottom bg-dark">
+  <div class='container text '>
+    <span>© 2020 Copyright: Pavel Ekishev</span>
+  </div>
+</footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>

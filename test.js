@@ -1,14 +1,12 @@
 "use strict";
-function discover(data) {
+function discover() {
     getData()
         .then(data => {
-            console.log('outer', data);
             let animes = pickFourRandomAnimeFromArray(data);
             let arrayUrlAnime = animes.map(function(element){       
                 return element.picUrl;
             })
-            for(let i=0;i<arrayUrlAnime.length;i++){ 
-                console.log(arrayUrlAnime);               
+            for(let i=0;i<arrayUrlAnime.length;i++){             
                 let imgSrc = document.getElementById("imgContent"+i);    
                 imgSrc.src = arrayUrlAnime[i];
             }
@@ -104,35 +102,35 @@ if (currentTheme) {
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
         document.getElementById('body').classList.add('bg-dark');
-        document.getElementById('siteName').style.color = 'white';
+        document.getElementById('brandContainer').classList.remove('text-dark');
+        document.getElementById('brandContainer').classList.add('text-white');
         document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgba(0,0,0,0.66)';
     }
     else if(currentTheme === 'light'){
         toggleSwitch.checked = false;
         document.getElementById('body').classList.remove('bg-dark');
-        document.getElementById('siteName').style.color = 'black';
         document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgb(245, 243, 243)';
     }
 }
 function switchTheme(e){
-    console.log(localStorage.getItem('theme'));
-
     if (e.target.checked) {
         document.getElementById('body').classList.add('bg-dark');
-        document.getElementById('siteName').style.color = 'white';
+        document.getElementById('brandContainer').classList.remove('text-dark');
+        document.getElementById('brandContainer').classList.add('text-white');
         document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgba(0,0,0,0.66)';
         localStorage.setItem('theme', 'dark');
     }
     else {        
         document.getElementById('body').classList.remove('bg-dark');
-        document.getElementById('siteName').style.color = 'black';
+        document.getElementById('brandContainer').classList.remove('text-white');
+        document.getElementById('brandContainer').classList.add('text-dark');
         document.getElementById('carouselAnime').style.boxShadow = '0px 0px 43px 32px rgb(245, 243, 243)';
         localStorage.setItem('theme', 'light');
     }    
 }
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-let currentDeg = 720;
+var currentDeg = 720;
 function rotateSvg(){
     let sectionText = document.getElementById('sectionText');
     sectionText.style.transform = 'rotate('+currentDeg+'deg)';
