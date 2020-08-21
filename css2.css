@@ -108,14 +108,13 @@ header{
     display: inline-block;
     width: 60px;
     height: 34px;
-    
-  }
-  .switch input {
+}
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  .slider {
+}
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -124,8 +123,8 @@ header{
     bottom: 0;
     background-color: #333333;
     transition: 0.4s;
-  }
-  .slider:before {
+}
+.slider:before {
     position: absolute;
     content: "";
     height: 40px;
@@ -140,43 +139,48 @@ header{
     background: white;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked + .slider {
     background-color: #ffffff;
-  }
-  input:checked + .slider:before {
+}
+input:checked + .slider:before {
     transform: translateX(24px);
     background: #333333;
     background-repeat: no-repeat;
     background-position: center;
-  }
+}
 
-  .slider.round {
+.slider.round {
     border-radius: 34px;
-  }
-  .slider.round:before {
+}
+.slider.round:before {
     border-radius: 50%;
-  }
-  #circle{
-      position: relative;
-      z-index: -1020;
-      left:7.5rem;
-      top:-6rem;
-      background:rgb(1, 39, 165);
-      rotate: 180deg;
-      border-radius: 35%;
-      width: 7.5vw;
-      max-width: 100%;
-      height: 15rem;
-      opacity: 0.8;
-  }
+}
+#circle{
+    position: relative;
+    z-index: -1020;
+    left:7.5rem;
+    top:-6rem;
+    background:rgb(1, 39, 165);
+    rotate: 180deg;
+    border-radius: 35%;
+    width: 7.5vw;
+    max-width: 100%;
+    height: 15rem;
+    opacity: 0.8;
+}
 
-  #siteName{
-      color:rgb(10, 10, 10);
-      position: relative;
-      right:2rem;
-  }
+#siteName{
+    color:rgb(10, 10, 10);
+    position: relative;
+    right:2rem;
+}
+.navbar-toggler-icon{
+    z-index: 5;
+    
+}
+
 
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -317,6 +321,7 @@ h1{
     main{
         min-height: 80vh;
     }
+    
     #space{
         height: 10vh;
     }

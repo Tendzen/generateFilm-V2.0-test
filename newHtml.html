@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Gamovie</title>
   <meta charset="utf-8">
+  <meta name="description" content="Wannna see top anime? Just generate it">
+  <meta name="keywords" content="Anime, generate 2d films">
+  <meta name="author" content="Pavel Ekishev">
+  <title>Gamovie-generate anime for you</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css2.css" />
@@ -24,7 +27,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+      <div class="navbar-collapse collapse ml-auto navbar-default" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <div id='circle'></div>
           <li class='nav-item' id='switchContainer'>
@@ -66,7 +69,9 @@
     <div class="container">
       <div class='row align-items-center' id='rowContainer'>
           <div class='col-xl-3' id='firstCol'>
+              <a href="" id='generateAnimeHref'>
               <button type="button" class="btn btn-light text-center" id="startGenerate">Generate Anime For You</button>
+            </a>
             </div>  
             <div class="w-100 d-block d-sm-none"></div>
           <div class='col-xl-5 ml-auto' id='secondCol'>
@@ -126,11 +131,11 @@
     </h1>
   </div>
   </div>
-<footer class="page-footer text-center py-3 fixed-bottom bg-dark">
-  <div class='container text '>
-    <span>© 2020 Copyright: Pavel Ekishev</span>
-  </div>
-</footer>
+  <footer class="page-footer text-center py-1 fixed-bottom bg-dark">
+    <div class='container text '>
+      <span>© 2020 Copyright: Pavel Ekishev</span>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -148,6 +153,19 @@
       showPanel();
     });
     document.getElementById('carousel').addEventListener('click',rotateSvg);
+    function changeHrefOnButton(x){
+    if(x.matches){
+        let el = document.getElementById("generateAnimeHref");
+        el.href = '#carousel';
+    }
+    else{
+       document.getElementById("generateAnimeHref").href='#header';    
+    }
+}
+   let x = window.matchMedia('(max-width:1200px)');
+   changeHrefOnButton(x);
+   x.addEventListener(changeHrefOnButton);
+
     </script>
 </body>
 
