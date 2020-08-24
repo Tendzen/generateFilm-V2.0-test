@@ -357,22 +357,6 @@ h1{
     } 
 }
 
-@media only screen and (max-height:535px){
-    main{
-        min-height: 160vh;
-    }
-    #space{
-        height: 10vh;
-    }
-    #logo{
-        width: 25vw;
-        height: 22vw;
-    }
-    .animate__flash{        
-        font-size: 11.5vw;
-    } 
-
-}
 @media only screen and (orientation: portrait) and (min-width:326px) and (max-width:425px){
     main{
         min-height: 90vh;
