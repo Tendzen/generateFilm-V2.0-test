@@ -324,7 +324,7 @@ h1{
 
 }
 
-@media only screen and (max-width:325px){
+@media only screen and (orientation: portrait) and (max-width:325px){
     main{
         min-height: 80vh;
     }
@@ -339,6 +339,24 @@ h1{
     .animate__flash{        
         font-size: 13.5vw;
     } 
+}
+@media only screen and (orientation: landscape) and (max-height:325px){
+    main{
+        min-height: 180vh;
+    }
+    
+    #space{
+        height: 0;
+    }
+    #logo{
+        width: 120px;
+        height: 120px;
+    }
+    .animate__flash{        
+        font-size: 6.5vw;
+    } 
+}
+
 }
 @media only screen and (max-height:535px){
     main{
@@ -358,10 +376,10 @@ h1{
 }
 @media only screen and (orientation: portrait) and (min-width:326px) and (max-width:425px){
     main{
-        min-height: 100vh;
+        min-height: 90vh;
     }
     .height-main{
-        min-height:120vh;
+        min-height:90vh;
     }
     #space{
         height: 10vh;
@@ -374,9 +392,43 @@ h1{
         font-size: 17.5vw;
     } 
 }
+@media only screen and (orientation: landscape) and (min-height:326px) and (max-height:425px){
+    main{
+        min-height: 150vh;
+    }
+    .height-main{
+        min-height:120vh;
+    }
+    #space{
+        height: 10vh;
+    }
+    #logo{
+        width: 20vw;
+        height: 24vw;
+    }
+    .animate__flash{        
+        font-size: 8.5vw;
+    } 
+}
 
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+
+@media only screen and (orientation: portrait) and (min-width:768px) and (max-width:1024px){
+    main{
+        min-height: 105vh;
+    }
+    #space{
+        height: 10vh;
+    }
+    #logo{
+        min-width: 35vw;
+        min-height: 35vw;
+    }
+    .animate__flash{        
+        font-size: 12vw;
+    } 
+}
+@media only screen and (max-device-width:1200px) and (orientation: landscape) and (min-height:768px) and (max-height:1024px){
     main{
         min-height: 155vh;
     }
@@ -384,15 +436,16 @@ h1{
         height: 10vh;
     }
     #logo{
-        min-width: 10vw;
-        min-height: 10vw;
+        min-width: 25vw;
+        min-height: 28vw;
     }
     .animate__flash{        
-        font-size: 10vw;
+        font-size: 9vw;
     } 
 }
 
-@media only screen and (min-width:426px) and (max-width:767px){
+
+@media only screen and (orientation: portrait) and (min-width:426px) and (max-width:767px){
     main{
         min-height: 135vh;
     }
@@ -405,6 +458,21 @@ h1{
     }
     .animate__flash{        
         font-size: 10vw;
+    } 
+}
+@media only screen and (orientation: landscape) and (min-height:426px) and (max-height:767px){
+    main{
+        min-height: 170vh;
+    }
+    #space{
+        height: 10vh;
+    }
+    #logo{
+        width: 25vw;
+        height: 30vw;
+    }
+    .animate__flash{        
+        font-size: 8vw;
     } 
 
 }
